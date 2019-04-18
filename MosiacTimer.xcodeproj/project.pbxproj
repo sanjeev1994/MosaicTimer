@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19C711FF5D632C3288820218 /* Pods_MosiacTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91CFE51F87EF25BBA286EA4 /* Pods_MosiacTimerTests.framework */; };
+		3FB1EF44571C672FD8D3B945 /* Pods_MosiacTimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F50B7A019755EBAEBA898 /* Pods_MosiacTimerUITests.framework */; };
+		4E9FF33B138B2888A3E57F5F /* Pods_MosiacTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1756039DEEC4E8DA428C7CF9 /* Pods_MosiacTimer.framework */; };
+		AF164CF32267DAAB00610264 /* TimeStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF164CF22267DAAB00610264 /* TimeStatusModel.swift */; };
+		AFE5B0B32267B15B00355479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0B22267B15B00355479 /* AppDelegate.swift */; };
+		AFE5B0B52267B15B00355479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0B42267B15B00355479 /* ViewController.swift */; };
+		AFE5B0B82267B15B00355479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE5B0B62267B15B00355479 /* Main.storyboard */; };
+		AFE5B0BA2267B15D00355479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE5B0B92267B15D00355479 /* Assets.xcassets */; };
+		AFE5B0BD2267B15D00355479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */; };
+		AFE5B0C82267B15D00355479 /* MosiacTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0C72267B15D00355479 /* MosiacTimerTests.swift */; };
+		AFE5B0D32267B15D00355479 /* MosiacTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0D22267B15D00355479 /* MosiacTimerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFE5B0C42267B15D00355479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFE5B0A72267B15A00355479 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFE5B0AE2267B15B00355479;
+			remoteInfo = MosiacTimer;
+		};
+		AFE5B0CF2267B15D00355479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFE5B0A72267B15A00355479 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFE5B0AE2267B15B00355479;
+			remoteInfo = MosiacTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		150B859F926238FD7F48F5CC /* Pods-MosiacTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimer.release.xcconfig"; path = "Target Support Files/Pods-MosiacTimer/Pods-MosiacTimer.release.xcconfig"; sourceTree = "<group>"; };
+		1756039DEEC4E8DA428C7CF9 /* Pods_MosiacTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MosiacTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F8A1C53A04E256D0F93917 /* Pods-MosiacTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimer.debug.xcconfig"; path = "Target Support Files/Pods-MosiacTimer/Pods-MosiacTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		2789D63BD3D4C8142A999FEE /* Pods-MosiacTimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerUITests.release.xcconfig"; path = "Target Support Files/Pods-MosiacTimerUITests/Pods-MosiacTimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E9F50B7A019755EBAEBA898 /* Pods_MosiacTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MosiacTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7560866AEFD8F3F62F8B9E84 /* Pods-MosiacTimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerUITests.debug.xcconfig"; path = "Target Support Files/Pods-MosiacTimerUITests/Pods-MosiacTimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF164CF22267DAAB00610264 /* TimeStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatusModel.swift; sourceTree = "<group>"; };
+		AFE5B0AF2267B15B00355479 /* MosiacTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MosiacTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE5B0B22267B15B00355479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFE5B0B42267B15B00355479 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFE5B0B72267B15B00355479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFE5B0B92267B15D00355479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFE5B0BC2267B15D00355479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFE5B0BE2267B15D00355479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE5B0C32267B15D00355479 /* MosiacTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosiacTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE5B0C72267B15D00355479 /* MosiacTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosiacTimerTests.swift; sourceTree = "<group>"; };
+		AFE5B0C92267B15D00355479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE5B0CE2267B15D00355479 /* MosiacTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosiacTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE5B0D22267B15D00355479 /* MosiacTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosiacTimerUITests.swift; sourceTree = "<group>"; };
+		AFE5B0D42267B15D00355479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF343EB71A9B11B4A6F364FD /* Pods-MosiacTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerTests.release.xcconfig"; path = "Target Support Files/Pods-MosiacTimerTests/Pods-MosiacTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		D91CFE51F87EF25BBA286EA4 /* Pods_MosiacTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MosiacTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E515C68D7E028094279A7C9A /* Pods-MosiacTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerTests.debug.xcconfig"; path = "Target Support Files/Pods-MosiacTimerTests/Pods-MosiacTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFE5B0AC2267B15B00355479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9FF33B138B2888A3E57F5F /* Pods_MosiacTimer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE5B0C02267B15D00355479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C711FF5D632C3288820218 /* Pods_MosiacTimerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE5B0CB2267B15D00355479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB1EF44571C672FD8D3B945 /* Pods_MosiacTimerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DF0A9C10BD1E554BFE964F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20F8A1C53A04E256D0F93917 /* Pods-MosiacTimer.debug.xcconfig */,
+				150B859F926238FD7F48F5CC /* Pods-MosiacTimer.release.xcconfig */,
+				E515C68D7E028094279A7C9A /* Pods-MosiacTimerTests.debug.xcconfig */,
+				CF343EB71A9B11B4A6F364FD /* Pods-MosiacTimerTests.release.xcconfig */,
+				7560866AEFD8F3F62F8B9E84 /* Pods-MosiacTimerUITests.debug.xcconfig */,
+				2789D63BD3D4C8142A999FEE /* Pods-MosiacTimerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7B0748DD9CCA64DDB0C9BC0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1756039DEEC4E8DA428C7CF9 /* Pods_MosiacTimer.framework */,
+				D91CFE51F87EF25BBA286EA4 /* Pods_MosiacTimerTests.framework */,
+				6E9F50B7A019755EBAEBA898 /* Pods_MosiacTimerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFE5B0A62267B15A00355479 = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0B12267B15B00355479 /* MosiacTimer */,
+				AFE5B0C62267B15D00355479 /* MosiacTimerTests */,
+				AFE5B0D12267B15D00355479 /* MosiacTimerUITests */,
+				AFE5B0B02267B15B00355479 /* Products */,
+				6DF0A9C10BD1E554BFE964F8 /* Pods */,
+				7B0748DD9CCA64DDB0C9BC0D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFE5B0B02267B15B00355479 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0AF2267B15B00355479 /* MosiacTimer.app */,
+				AFE5B0C32267B15D00355479 /* MosiacTimerTests.xctest */,
+				AFE5B0CE2267B15D00355479 /* MosiacTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFE5B0B12267B15B00355479 /* MosiacTimer */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0B22267B15B00355479 /* AppDelegate.swift */,
+				AFE5B0B42267B15B00355479 /* ViewController.swift */,
+				AFE5B0B62267B15B00355479 /* Main.storyboard */,
+				AFE5B0B92267B15D00355479 /* Assets.xcassets */,
+				AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */,
+				AFE5B0BE2267B15D00355479 /* Info.plist */,
+				AF164CF22267DAAB00610264 /* TimeStatusModel.swift */,
+			);
+			path = MosiacTimer;
+			sourceTree = "<group>";
+		};
+		AFE5B0C62267B15D00355479 /* MosiacTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0C72267B15D00355479 /* MosiacTimerTests.swift */,
+				AFE5B0C92267B15D00355479 /* Info.plist */,
+			);
+			path = MosiacTimerTests;
+			sourceTree = "<group>";
+		};
+		AFE5B0D12267B15D00355479 /* MosiacTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0D22267B15D00355479 /* MosiacTimerUITests.swift */,
+				AFE5B0D42267B15D00355479 /* Info.plist */,
+			);
+			path = MosiacTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFE5B0AE2267B15B00355479 /* MosiacTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE5B0D72267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimer" */;
+			buildPhases = (
+				F0557193A320B8CEF5F55048 /* [CP] Check Pods Manifest.lock */,
+				AFE5B0AB2267B15B00355479 /* Sources */,
+				AFE5B0AC2267B15B00355479 /* Frameworks */,
+				AFE5B0AD2267B15B00355479 /* Resources */,
+				D91B39204A0519DB6C99BD87 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MosiacTimer;
+			productName = MosiacTimer;
+			productReference = AFE5B0AF2267B15B00355479 /* MosiacTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFE5B0C22267B15D00355479 /* MosiacTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE5B0DA2267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimerTests" */;
+			buildPhases = (
+				206FAC83B3FE12E8D338BD9D /* [CP] Check Pods Manifest.lock */,
+				AFE5B0BF2267B15D00355479 /* Sources */,
+				AFE5B0C02267B15D00355479 /* Frameworks */,
+				AFE5B0C12267B15D00355479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFE5B0C52267B15D00355479 /* PBXTargetDependency */,
+			);
+			name = MosiacTimerTests;
+			productName = MosiacTimerTests;
+			productReference = AFE5B0C32267B15D00355479 /* MosiacTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFE5B0CD2267B15D00355479 /* MosiacTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE5B0DD2267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimerUITests" */;
+			buildPhases = (
+				822F6D0F2A81D8755BB4F996 /* [CP] Check Pods Manifest.lock */,
+				AFE5B0CA2267B15D00355479 /* Sources */,
+				AFE5B0CB2267B15D00355479 /* Frameworks */,
+				AFE5B0CC2267B15D00355479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFE5B0D02267B15D00355479 /* PBXTargetDependency */,
+			);
+			name = MosiacTimerUITests;
+			productName = MosiacTimerUITests;
+			productReference = AFE5B0CE2267B15D00355479 /* MosiacTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFE5B0A72267B15A00355479 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Sanjeev;
+				TargetAttributes = {
+					AFE5B0AE2267B15B00355479 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					AFE5B0C22267B15D00355479 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = AFE5B0AE2267B15B00355479;
+					};
+					AFE5B0CD2267B15D00355479 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = AFE5B0AE2267B15B00355479;
+					};
+				};
+			};
+			buildConfigurationList = AFE5B0AA2267B15A00355479 /* Build configuration list for PBXProject "MosiacTimer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFE5B0A62267B15A00355479;
+			productRefGroup = AFE5B0B02267B15B00355479 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFE5B0AE2267B15B00355479 /* MosiacTimer */,
+				AFE5B0C22267B15D00355479 /* MosiacTimerTests */,
+				AFE5B0CD2267B15D00355479 /* MosiacTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFE5B0AD2267B15B00355479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE5B0BD2267B15D00355479 /* LaunchScreen.storyboard in Resources */,
+				AFE5B0BA2267B15D00355479 /* Assets.xcassets in Resources */,
+				AFE5B0B82267B15B00355479 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE5B0C12267B15D00355479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE5B0CC2267B15D00355479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		206FAC83B3FE12E8D338BD9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MosiacTimerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		822F6D0F2A81D8755BB4F996 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MosiacTimerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D91B39204A0519DB6C99BD87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MosiacTimer/Pods-MosiacTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MosiacTimer/Pods-MosiacTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0557193A320B8CEF5F55048 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MosiacTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFE5B0AB2267B15B00355479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF164CF32267DAAB00610264 /* TimeStatusModel.swift in Sources */,
+				AFE5B0B52267B15B00355479 /* ViewController.swift in Sources */,
+				AFE5B0B32267B15B00355479 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE5B0BF2267B15D00355479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE5B0C82267B15D00355479 /* MosiacTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE5B0CA2267B15D00355479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE5B0D32267B15D00355479 /* MosiacTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFE5B0C52267B15D00355479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFE5B0AE2267B15B00355479 /* MosiacTimer */;
+			targetProxy = AFE5B0C42267B15D00355479 /* PBXContainerItemProxy */;
+		};
+		AFE5B0D02267B15D00355479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFE5B0AE2267B15B00355479 /* MosiacTimer */;
+			targetProxy = AFE5B0CF2267B15D00355479 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFE5B0B62267B15B00355479 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE5B0B72267B15B00355479 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE5B0BC2267B15D00355479 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFE5B0D52267B15D00355479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFE5B0D62267B15D00355479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFE5B0D82267B15D00355479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F8A1C53A04E256D0F93917 /* Pods-MosiacTimer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2RBHBH792;
+				INFOPLIST_FILE = MosiacTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.MosiacTimers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFE5B0D92267B15D00355479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 150B859F926238FD7F48F5CC /* Pods-MosiacTimer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2RBHBH792;
+				INFOPLIST_FILE = MosiacTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.MosiacTimers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AFE5B0DB2267B15D00355479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E515C68D7E028094279A7C9A /* Pods-MosiacTimerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 932XML5W5Y;
+				INFOPLIST_FILE = MosiacTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.MosiacTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MosiacTimer.app/MosiacTimer";
+			};
+			name = Debug;
+		};
+		AFE5B0DC2267B15D00355479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF343EB71A9B11B4A6F364FD /* Pods-MosiacTimerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 932XML5W5Y;
+				INFOPLIST_FILE = MosiacTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.MosiacTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MosiacTimer.app/MosiacTimer";
+			};
+			name = Release;
+		};
+		AFE5B0DE2267B15D00355479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7560866AEFD8F3F62F8B9E84 /* Pods-MosiacTimerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 932XML5W5Y;
+				INFOPLIST_FILE = MosiacTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.MosiacTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MosiacTimer;
+			};
+			name = Debug;
+		};
+		AFE5B0DF2267B15D00355479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2789D63BD3D4C8142A999FEE /* Pods-MosiacTimerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 932XML5W5Y;
+				INFOPLIST_FILE = MosiacTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mosaic.MosiacTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MosiacTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFE5B0AA2267B15A00355479 /* Build configuration list for PBXProject "MosiacTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE5B0D52267B15D00355479 /* Debug */,
+				AFE5B0D62267B15D00355479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFE5B0D72267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE5B0D82267B15D00355479 /* Debug */,
+				AFE5B0D92267B15D00355479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFE5B0DA2267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE5B0DB2267B15D00355479 /* Debug */,
+				AFE5B0DC2267B15D00355479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFE5B0DD2267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE5B0DE2267B15D00355479 /* Debug */,
+				AFE5B0DF2267B15D00355479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFE5B0A72267B15A00355479 /* Project object */;
+}
