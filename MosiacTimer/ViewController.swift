@@ -69,6 +69,7 @@ class ViewController: UIViewController {
             {
                 backTimer?.invalidate()
             }
+            UserDefaults.init(suiteName: "group.mosaic.MosiacTimers")?.setValue(timeLabel.text, forKey: "availableTime")
             ringProgressView?.removeFromSuperview()
             covertTimeInterval(interval: TimeInterval(status.targetTime))
         

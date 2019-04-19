@@ -45,7 +45,6 @@ final class TimeStatusModel {
         set {
             UserDefaults.standard.set(newValue, forKey: #function)
         }
-    }
-    
+    }    
 }
 
