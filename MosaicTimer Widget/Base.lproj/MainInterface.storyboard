@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="MosaicTimer_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJM-Rr-niJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
+                                <color key="textColor" red="0.0" green="0.44127061629999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb5-st-XRg">
+                                <rect key="frame" x="0.0" y="44" width="320" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="openBtnAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="bUa-oy-T0a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hJM-Rr-niJ" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="7G7-28-vJM"/>
+                            <constraint firstItem="Sb5-st-XRg" firstAttribute="bottom" secondItem="ssy-KU-ocm" secondAttribute="bottom" id="BMz-3F-fXt"/>
+                            <constraint firstItem="hJM-Rr-niJ" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="Tnu-Z5-ORt"/>
+                            <constraint firstItem="Sb5-st-XRg" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="ec8-Vt-cd9"/>
+                            <constraint firstItem="Sb5-st-XRg" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="n3Z-zE-sXi"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Sb5-st-XRg" secondAttribute="trailing" id="nB2-mc-Iyh"/>
+                            <constraint firstItem="hJM-Rr-niJ" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="ndU-3t-8uE"/>
+                            <constraint firstAttribute="bottom" secondItem="hJM-Rr-niJ" secondAttribute="bottom" id="x6n-lM-d9x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="openBtn" destination="Sb5-st-XRg" id="bdZ-tn-5Zx"/>
+                        <outlet property="timeLabel" destination="hJM-Rr-niJ" id="6G5-ba-f4o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="75.334821428571431"/>
+        </scene>
+    </scenes>
+</document>

@@ -86,5 +86,56 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="103.89805097451276"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="xXW-em-8Je">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" id="Dga-bx-r0g" customClass="PopUpViewController" customModule="MosiacTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cdi-bK-sve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-5A-TtN">
+                                <rect key="frame" x="275" y="40" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="L2U-ne-ToP"/>
+                                    <constraint firstAttribute="height" constant="30" id="dSd-JS-PTC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.12549019610000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissBtnAction:" destination="Dga-bx-r0g" eventType="touchUpInside" id="Pf4-Bm-8H7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Notification Tone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ack-cK-oAh">
+                                <rect key="frame" x="0.0" y="90" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jHS-tC-c76"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.73333333329999995" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ack-cK-oAh" firstAttribute="leading" secondItem="XsJ-HX-ymB" secondAttribute="leading" id="257-4g-tUx"/>
+                            <constraint firstItem="XsJ-HX-ymB" firstAttribute="trailing" secondItem="Ck3-5A-TtN" secondAttribute="trailing" constant="20" id="D1S-4B-KmO"/>
+                            <constraint firstItem="ack-cK-oAh" firstAttribute="top" secondItem="XsJ-HX-ymB" secondAttribute="top" constant="70" id="fKt-GE-D2d"/>
+                            <constraint firstItem="XsJ-HX-ymB" firstAttribute="trailing" secondItem="ack-cK-oAh" secondAttribute="trailing" id="jev-Wp-fIT"/>
+                            <constraint firstItem="Ck3-5A-TtN" firstAttribute="top" secondItem="XsJ-HX-ymB" secondAttribute="top" constant="20" id="mMB-Sj-cz9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XsJ-HX-ymB"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissBtn" destination="Ck3-5A-TtN" id="IuN-1Y-z1Y"/>
+                        <outlet property="titleLabel" destination="ack-cK-oAh" id="hy5-Ph-SLM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deO-Wu-heg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="100"/>
+        </scene>
     </scenes>
 </document>

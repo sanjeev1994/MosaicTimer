@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1245C627F2EF591CAE281EC4F3B9ADF6"
+               BlueprintIdentifier = "6275713DE69F8B909E725F0797FB577E"
                BuildableName = "Pods_MosiacTimer.framework"
                BlueprintName = "Pods-MosiacTimer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1245C627F2EF591CAE281EC4F3B9ADF6"
+            BlueprintIdentifier = "6275713DE69F8B909E725F0797FB577E"
             BuildableName = "Pods_MosiacTimer.framework"
             BlueprintName = "Pods-MosiacTimer"
             ReferencedContainer = "container:Pods.xcodeproj">

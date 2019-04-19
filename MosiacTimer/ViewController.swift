@@ -9,6 +9,9 @@
 import UIKit
 import UserNotifications
 import MKRingProgressView
+import BottomPopup
+
+
 
 class ViewController: UIViewController {
    
@@ -28,7 +31,10 @@ class ViewController: UIViewController {
         NotificationCenter.default
             .addObserver(self, selector: #selector(reinstateBackgroundTask),
                          name: UIApplication.didBecomeActiveNotification, object: nil)
-        
+        if status.audioTone == "nil"
+        {
+            status.audioTone = "Default"
+        }
         createBtn()
         if status.targetTime == 0
         {
@@ -77,7 +83,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func settingsBtnAction(_ sender: Any) {
-        print("settings")
+        guard let popupVC = storyboard?.instantiateViewController(withIdentifier: "PopUpViewController") as? PopUpViewController else { return }
+        popupVC.height = self.view.frame.height - timeLabel.frame.height
+        popupVC.topCornerRadius = 15
+        popupVC.presentDuration = 1.0
+        popupVC.dismissDuration = 1.0
+        popupVC.shouldDismissInteractivelty = true
+        present(popupVC, animated: true, completion: nil)
     }
     
     func createBtn() {
@@ -169,11 +181,19 @@ class ViewController: UIViewController {
     
     func scheduleNotification(notificationType: String) {
         print("background \(Date())")
-        
         let content = UNMutableNotificationContent()
         content.title = notificationType
         content.body = " "
-        content.sound = UNNotificationSound.default
+        print(status.audioTone)
+        if status.audioTone == "Default"
+        {
+            content.sound = UNNotificationSound.default
+        }
+        else
+        {
+            content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "\(status.audioTone).wav"))
+        }
+        
         content.badge = 1
         
         let triger = UNTimeIntervalNotificationTrigger(timeInterval: 0.5, repeats: false)
@@ -184,21 +204,18 @@ class ViewController: UIViewController {
     }
     @objc func startTimer() {
         
-        if status.targetTime == -1 {
-            let displayTime = Date().timeIntervalSince(status.startTime) + status.totalTime
-            covertTimeInterval(interval: TimeInterval(displayTime))
-        } else {
-            let intervalTime = status.startTime.timeIntervalSinceNow
-            let displayTime = Int(intervalTime) + status.targetTime
-            covertTimeInterval(interval: TimeInterval(displayTime))
-            ringProgressView?.progress = abs(intervalTime / Double(btnSelected))
-            
-            if displayTime == 0
-            {
-                status.startTime = Date()
-                scheduleNotification(notificationType: "Timer Done")
-            }
+        let intervalTime = status.startTime.timeIntervalSinceNow
+        let displayTime = Int(intervalTime) + status.targetTime
+        covertTimeInterval(interval: TimeInterval(displayTime))
+        
+        ringProgressView?.progress = abs(intervalTime / Double(btnSelected))
+        
+        if displayTime == 0
+        {
+            status.startTime = Date()
+            scheduleNotification(notificationType: "Timer Done")
         }
+        
     }
     
     func covertTimeInterval(interval: TimeInterval) {
@@ -207,12 +224,15 @@ class ViewController: UIViewController {
         let absInterval = abs(Int(interval))
         let seconds = absInterval % 60
         let minutes = absInterval / 60
-        
+        var timeString = "5:00"
         if minutes != 0 {
-            timeLabel.text = String(minutes) + ":" + String(format: "%.2d", seconds)
+            timeString = String(minutes) + ":" + String(format: "%.2d", seconds)
+            
         } else {
-            timeLabel.text = String(seconds)
+            timeString = String(seconds)
         }
+        timeLabel.text = timeString
+        UserDefaults.init(suiteName: "group.mosaic.MosiacTimers")?.setValue(timeString, forKey: "availableTime")
         
     }
     @objc func buttonAction(sender: UIButton!) {
@@ -292,5 +312,31 @@ extension ViewController : UNUserNotificationCenterDelegate{
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound, .badge])
+    }
+}
+extension ViewController: BottomPopupDelegate {
+    
+    func bottomPopupViewLoaded() {
+        print("bottomPopupViewLoaded")
+    }
+    
+    func bottomPopupWillAppear() {
+        print("bottomPopupWillAppear")
+    }
+    
+    func bottomPopupDidAppear() {
+        print("bottomPopupDidAppear")
+    }
+    
+    func bottomPopupWillDismiss() {
+        print("bottomPopupWillDismiss")
+    }
+    
+    func bottomPopupDidDismiss() {
+        print("bottomPopupDidDismiss")
+    }
+    
+    func bottomPopupDismissInteractionPercentChanged(from oldValue: CGFloat, to newValue: CGFloat) {
+        print("bottomPopupDismissInteractionPercentChanged fromValue: \(oldValue) to: \(newValue)")
     }
 }

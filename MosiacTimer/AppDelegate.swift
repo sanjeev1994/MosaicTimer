@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         status.targetTime = 300
+        UIApplication.shared.applicationIconBadgeNumber = 0
         notificationCenter.requestAuthorization(options: options) {
             (didAllow, error) in
             if !didAllow {
@@ -41,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
@@ -50,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        UserDefaults.init(suiteName: "group.mosaic.MosiacTimers")?.setValue("05:00", forKey: "availableTime")
     }
     func application(_ application: UIApplication,
                               performActionFor shortcutItem: UIApplicationShortcutItem,
@@ -66,6 +69,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initViewController  = storyBoard.instantiateViewController(withIdentifier: "ViewController")
         self.window?.rootViewController = initViewController
         self.window?.makeKeyAndVisible()
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool
+    {
+        return true
     }
    
 

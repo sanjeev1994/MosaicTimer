@@ -52,6 +52,15 @@ final class TimeStatusModel {
             UserDefaults.standard.set(newValue, forKey: #function)
         }
     }
+    var audioTone: String {
+        get {
+            return UserDefaults.standard.string(forKey: #function) ?? "nil"
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: #function)
+        }
+    }
     
 }
 

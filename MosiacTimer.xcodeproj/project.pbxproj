@@ -11,6 +11,16 @@
 		3FB1EF44571C672FD8D3B945 /* Pods_MosiacTimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9F50B7A019755EBAEBA898 /* Pods_MosiacTimerUITests.framework */; };
 		4E9FF33B138B2888A3E57F5F /* Pods_MosiacTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1756039DEEC4E8DA428C7CF9 /* Pods_MosiacTimer.framework */; };
 		AF164CF32267DAAB00610264 /* TimeStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF164CF22267DAAB00610264 /* TimeStatusModel.swift */; };
+		AF9765492268F383001DAD96 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9765482268F383001DAD96 /* NotificationCenter.framework */; };
+		AF97654C2268F383001DAD96 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97654B2268F383001DAD96 /* TodayViewController.swift */; };
+		AF97654F2268F383001DAD96 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF97654D2268F383001DAD96 /* MainInterface.storyboard */; };
+		AF9765532268F383001DAD96 /* MosaicTimer Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AF9765472268F383001DAD96 /* MosaicTimer Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF97657622692D6A001DAD96 /* Point.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF97657122692D68001DAD96 /* Point.wav */; };
+		AF97657722692D6A001DAD96 /* Unconvinced.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF97657222692D68001DAD96 /* Unconvinced.wav */; };
+		AF97657822692D6A001DAD96 /* Slow.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF97657322692D69001DAD96 /* Slow.wav */; };
+		AF97657922692D6A001DAD96 /* Unsure.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF97657422692D69001DAD96 /* Unsure.wav */; };
+		AF97657A22692D6A001DAD96 /* Quite.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF97657522692D6A001DAD96 /* Quite.wav */; };
+		AFA23EC42269497A00898FFB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA23EC32269497A00898FFB /* PopUpViewController.swift */; };
 		AFE5B0B32267B15B00355479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0B22267B15B00355479 /* AppDelegate.swift */; };
 		AFE5B0B52267B15B00355479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0B42267B15B00355479 /* ViewController.swift */; };
 		AFE5B0B82267B15B00355479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE5B0B62267B15B00355479 /* Main.storyboard */; };
@@ -21,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AF9765512268F383001DAD96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFE5B0A72267B15A00355479 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF9765462268F383001DAD96;
+			remoteInfo = "MosaicTimer Widget";
+		};
 		AFE5B0C42267B15D00355479 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFE5B0A72267B15A00355479 /* Project object */;
@@ -37,6 +54,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AF9765572268F383001DAD96 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AF9765532268F383001DAD96 /* MosaicTimer Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		150B859F926238FD7F48F5CC /* Pods-MosiacTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimer.release.xcconfig"; path = "Target Support Files/Pods-MosiacTimer/Pods-MosiacTimer.release.xcconfig"; sourceTree = "<group>"; };
 		1756039DEEC4E8DA428C7CF9 /* Pods_MosiacTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MosiacTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +76,20 @@
 		6E9F50B7A019755EBAEBA898 /* Pods_MosiacTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MosiacTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7560866AEFD8F3F62F8B9E84 /* Pods-MosiacTimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerUITests.debug.xcconfig"; path = "Target Support Files/Pods-MosiacTimerUITests/Pods-MosiacTimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF164CF22267DAAB00610264 /* TimeStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatusModel.swift; sourceTree = "<group>"; };
+		AF9765472268F383001DAD96 /* MosaicTimer Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MosaicTimer Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9765482268F383001DAD96 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		AF97654B2268F383001DAD96 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		AF97654E2268F383001DAD96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		AF9765502268F383001DAD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF9765582268F3E2001DAD96 /* MKRingProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKRingProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF97655A2268FA1A001DAD96 /* MosaicTimer Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MosaicTimer Widget.entitlements"; sourceTree = "<group>"; };
+		AF97655B2268FA3F001DAD96 /* MosiacTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MosiacTimer.entitlements; sourceTree = "<group>"; };
+		AF97657122692D68001DAD96 /* Point.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Point.wav; sourceTree = "<group>"; };
+		AF97657222692D68001DAD96 /* Unconvinced.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Unconvinced.wav; sourceTree = "<group>"; };
+		AF97657322692D69001DAD96 /* Slow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Slow.wav; sourceTree = "<group>"; };
+		AF97657422692D69001DAD96 /* Unsure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Unsure.wav; sourceTree = "<group>"; };
+		AF97657522692D6A001DAD96 /* Quite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Quite.wav; sourceTree = "<group>"; };
+		AFA23EC32269497A00898FFB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		AFE5B0AF2267B15B00355479 /* MosiacTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MosiacTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE5B0B22267B15B00355479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE5B0B42267B15B00355479 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +109,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF9765442268F383001DAD96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9765492268F383001DAD96 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFE5B0AC2267B15B00355479 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,11 +160,24 @@
 		7B0748DD9CCA64DDB0C9BC0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF9765582268F3E2001DAD96 /* MKRingProgressView.framework */,
 				1756039DEEC4E8DA428C7CF9 /* Pods_MosiacTimer.framework */,
 				D91CFE51F87EF25BBA286EA4 /* Pods_MosiacTimerTests.framework */,
 				6E9F50B7A019755EBAEBA898 /* Pods_MosiacTimerUITests.framework */,
+				AF9765482268F383001DAD96 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF97654A2268F383001DAD96 /* MosaicTimer Widget */ = {
+			isa = PBXGroup;
+			children = (
+				AF97655A2268FA1A001DAD96 /* MosaicTimer Widget.entitlements */,
+				AF97654B2268F383001DAD96 /* TodayViewController.swift */,
+				AF97654D2268F383001DAD96 /* MainInterface.storyboard */,
+				AF9765502268F383001DAD96 /* Info.plist */,
+			);
+			path = "MosaicTimer Widget";
 			sourceTree = "<group>";
 		};
 		AFE5B0A62267B15A00355479 = {
@@ -120,6 +186,7 @@
 				AFE5B0B12267B15B00355479 /* MosiacTimer */,
 				AFE5B0C62267B15D00355479 /* MosiacTimerTests */,
 				AFE5B0D12267B15D00355479 /* MosiacTimerUITests */,
+				AF97654A2268F383001DAD96 /* MosaicTimer Widget */,
 				AFE5B0B02267B15B00355479 /* Products */,
 				6DF0A9C10BD1E554BFE964F8 /* Pods */,
 				7B0748DD9CCA64DDB0C9BC0D /* Frameworks */,
@@ -132,6 +199,7 @@
 				AFE5B0AF2267B15B00355479 /* MosiacTimer.app */,
 				AFE5B0C32267B15D00355479 /* MosiacTimerTests.xctest */,
 				AFE5B0CE2267B15D00355479 /* MosiacTimerUITests.xctest */,
+				AF9765472268F383001DAD96 /* MosaicTimer Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +207,12 @@
 		AFE5B0B12267B15B00355479 /* MosiacTimer */ = {
 			isa = PBXGroup;
 			children = (
+				AF97657122692D68001DAD96 /* Point.wav */,
+				AF97657522692D6A001DAD96 /* Quite.wav */,
+				AF97657322692D69001DAD96 /* Slow.wav */,
+				AF97657222692D68001DAD96 /* Unconvinced.wav */,
+				AF97657422692D69001DAD96 /* Unsure.wav */,
+				AF97655B2268FA3F001DAD96 /* MosiacTimer.entitlements */,
 				AFE5B0B22267B15B00355479 /* AppDelegate.swift */,
 				AFE5B0B42267B15B00355479 /* ViewController.swift */,
 				AFE5B0B62267B15B00355479 /* Main.storyboard */,
@@ -146,6 +220,7 @@
 				AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */,
 				AFE5B0BE2267B15D00355479 /* Info.plist */,
 				AF164CF22267DAAB00610264 /* TimeStatusModel.swift */,
+				AFA23EC32269497A00898FFB /* PopUpViewController.swift */,
 			);
 			path = MosiacTimer;
 			sourceTree = "<group>";
@@ -171,6 +246,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF9765462268F383001DAD96 /* MosaicTimer Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9765542268F383001DAD96 /* Build configuration list for PBXNativeTarget "MosaicTimer Widget" */;
+			buildPhases = (
+				AF9765432268F383001DAD96 /* Sources */,
+				AF9765442268F383001DAD96 /* Frameworks */,
+				AF9765452268F383001DAD96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MosaicTimer Widget";
+			productName = "MosaicTimer Widget";
+			productReference = AF9765472268F383001DAD96 /* MosaicTimer Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AFE5B0AE2267B15B00355479 /* MosiacTimer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFE5B0D72267B15D00355479 /* Build configuration list for PBXNativeTarget "MosiacTimer" */;
@@ -180,10 +272,12 @@
 				AFE5B0AC2267B15B00355479 /* Frameworks */,
 				AFE5B0AD2267B15B00355479 /* Resources */,
 				D91B39204A0519DB6C99BD87 /* [CP] Embed Pods Frameworks */,
+				AF9765572268F383001DAD96 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF9765522268F383001DAD96 /* PBXTargetDependency */,
 			);
 			name = MosiacTimer;
 			productName = MosiacTimer;
@@ -238,9 +332,20 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Sanjeev;
 				TargetAttributes = {
+					AF9765462268F383001DAD96 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					AFE5B0AE2267B15B00355479 = {
 						CreatedOnToolsVersion = 10.2;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -272,18 +377,32 @@
 				AFE5B0AE2267B15B00355479 /* MosiacTimer */,
 				AFE5B0C22267B15D00355479 /* MosiacTimerTests */,
 				AFE5B0CD2267B15D00355479 /* MosiacTimerUITests */,
+				AF9765462268F383001DAD96 /* MosaicTimer Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF9765452268F383001DAD96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF97654F2268F383001DAD96 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFE5B0AD2267B15B00355479 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AFE5B0BD2267B15D00355479 /* LaunchScreen.storyboard in Resources */,
+				AF97657722692D6A001DAD96 /* Unconvinced.wav in Resources */,
 				AFE5B0BA2267B15D00355479 /* Assets.xcassets in Resources */,
+				AF97657822692D6A001DAD96 /* Slow.wav in Resources */,
 				AFE5B0B82267B15B00355479 /* Main.storyboard in Resources */,
+				AF97657A22692D6A001DAD96 /* Quite.wav in Resources */,
+				AF97657622692D6A001DAD96 /* Point.wav in Resources */,
+				AF97657922692D6A001DAD96 /* Unsure.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,12 +476,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MosiacTimer/Pods-MosiacTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BottomPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +516,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF9765432268F383001DAD96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF97654C2268F383001DAD96 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AFE5B0AB2267B15B00355479 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +531,7 @@
 				AF164CF32267DAAB00610264 /* TimeStatusModel.swift in Sources */,
 				AFE5B0B52267B15B00355479 /* ViewController.swift in Sources */,
 				AFE5B0B32267B15B00355479 /* AppDelegate.swift in Sources */,
+				AFA23EC42269497A00898FFB /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +554,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AF9765522268F383001DAD96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF9765462268F383001DAD96 /* MosaicTimer Widget */;
+			targetProxy = AF9765512268F383001DAD96 /* PBXContainerItemProxy */;
+		};
 		AFE5B0C52267B15D00355479 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AFE5B0AE2267B15B00355479 /* MosiacTimer */;
@@ -437,6 +572,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AF97654D2268F383001DAD96 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF97654E2268F383001DAD96 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		AFE5B0B62267B15B00355479 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -456,6 +599,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AF9765552268F383001DAD96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MosaicTimer Widget/MosaicTimer Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2RBHBH792;
+				INFOPLIST_FILE = "MosaicTimer Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mosaic.MosiacTimers.MosaicTimer-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF9765562268F383001DAD96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "MosaicTimer Widget/MosaicTimer Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2RBHBH792;
+				INFOPLIST_FILE = "MosaicTimer Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mosaic.MosiacTimers.MosaicTimer-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AFE5B0D52267B15D00355479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -576,7 +759,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20F8A1C53A04E256D0F93917 /* Pods-MosiacTimer.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MosiacTimer/MosiacTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2RBHBH792;
 				INFOPLIST_FILE = MosiacTimer/Info.plist;
@@ -595,7 +780,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 150B859F926238FD7F48F5CC /* Pods-MosiacTimer.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MosiacTimer/MosiacTimer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2RBHBH792;
 				INFOPLIST_FILE = MosiacTimer/Info.plist;
@@ -699,6 +886,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF9765542268F383001DAD96 /* Build configuration list for PBXNativeTarget "MosaicTimer Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9765552268F383001DAD96 /* Debug */,
+				AF9765562268F383001DAD96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AFE5B0AA2267B15A00355479 /* Build configuration list for PBXProject "MosiacTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

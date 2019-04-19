@@ -7,6 +7,7 @@ target 'MosiacTimer' do
 
   # Pods for MosiacTimer
   pod 'MKRingProgressView'
+  pod 'BottomPopup'
   target 'MosiacTimerTests' do
     inherit! :search_paths
     # Pods for testing

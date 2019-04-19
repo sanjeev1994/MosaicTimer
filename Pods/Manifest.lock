@@ -1,16 +1,20 @@
 PODS:
+  - BottomPopup (0.5.0)
   - MKRingProgressView (2.2.2)
 
 DEPENDENCIES:
+  - BottomPopup
   - MKRingProgressView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BottomPopup
     - MKRingProgressView
 
 SPEC CHECKSUMS:
+  BottomPopup: d487f2fd398805f07e4563a29cf79233f531cbe7
   MKRingProgressView: b558eff66a648bd77b11f61cfc5603ae96008077
 
-PODFILE CHECKSUM: cb2012a1e20b40de2b9060393f27dd39e324f926
+PODFILE CHECKSUM: e137be2219155827eafd661e95ff559252526c12
 
 COCOAPODS: 1.6.1
