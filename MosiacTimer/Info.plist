@@ -34,49 +34,50 @@
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>timerIcon</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconAdd</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>1 min</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string> addBundleIdentifier.Timermins</string>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>timerIcon</string>
 		</dict>
 		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>timerIcon</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconAdd</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>5 mins</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string> addBundleIdentifier.Timermins</string>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>timerIcon</string>
 		</dict>
 		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>timerIcon</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconAdd</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>15 mins</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string> addBundleIdentifier.Timermins</string>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>timerIcon</string>
 		</dict>
 		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>timerIcon</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconAdd</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>30 mins</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string> addBundleIdentifier.Timermins</string>
-            <key>UIApplicationShortcutItemIconFile</key>
-            <string>timerIcon</string>
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
+		<string>fetch</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

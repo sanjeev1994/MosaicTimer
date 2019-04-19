@@ -27,28 +27,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UNUserNotificationCenter.current().delegate = self
-        NotificationCenter.default
-            .addObserver(self, selector: #selector(reinstateBackgroundTask),
-                         name: UIApplication.didBecomeActiveNotification, object: nil)
+       
+        //setting notification tone to default if there is no user selection
         if status.audioTone == "nil"
         {
             status.audioTone = "Default"
         }
+        
+        // calling UI creation
         createBtn()
+        
+        // setting initial value to the timer to 5mins
         if status.targetTime == 0
         {
             status.targetTime = 300
         }
         btnSelected = status.targetTime
+        
+        // adding the start time to user defaults
         status.startTime = Date()
+        
+        //Starting the timer
         if atimer != nil
         {
             atimer?.invalidate()
         }
         atimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.startTimer), userInfo: nil, repeats: true)
-        registerBackgroundTask()
-        //RunLoop.current.add((atimer ?? nil)!, forMode: RunLoop.Mode.common)
+        RunLoop.current.add((atimer ?? nil)!, forMode: RunLoop.Mode.tracking)
         // Do any additional setup after loading the view.
     }
     
@@ -83,6 +88,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func settingsBtnAction(_ sender: Any) {
+        
+        // setting page UI creation
         guard let popupVC = storyboard?.instantiateViewController(withIdentifier: "PopUpViewController") as? PopUpViewController else { return }
         popupVC.height = self.view.frame.height - timeLabel.frame.height
         popupVC.topCornerRadius = 15
@@ -98,12 +105,14 @@ class ViewController: UIViewController {
         var yvalue = Int(timeLabel.frame.origin.y + timeLabel.frame.height + 30)
         var button = UIButton();
         var btnLabel = UILabel();
+        
+        // creating 6 buttons in 2 columns with 3 buttons in a row
         for column in 0..<2{
             for row in 0..<3{
                 button = UIButton(frame: CGRect(x: xvalue, y: yvalue, width: btnSize , height: btnSize))
                 button.backgroundColor = .clear
                 switch column {
-                    
+                // setting title to number of mins
                 case 0:
                     
                     switch row {
@@ -143,7 +152,10 @@ class ViewController: UIViewController {
                 button.layer.cornerRadius = 0.5 * button.bounds.size.width
                 button.clipsToBounds = true
                 button.layer.borderWidth = 4
+               
+                // setting tag to number of seconds to access it in button action
                 button.tag = btnTag * 60
+                
                 button.layer.borderColor = UIColor.btnBorderColor.cgColor
                 button.titleLabel?.font = UIFont(name:"HelveticaNeue", size: 30.0)
                 button.setTitleColor(UIColor.btnTextColor, for: .normal)
@@ -152,6 +164,8 @@ class ViewController: UIViewController {
                 
                 btnLabel = UILabel(frame: CGRect(x: Int(button.frame.origin.x + 20), y: yvalue - 20, width: btnSize - 40 , height: 6))
                 btnLabel.tag = btnTag * 600
+                
+                //checking which button should selected when app is opened
                 if btnTag == status.targetTime/60
                 {
                     btnLabel.backgroundColor = .red
@@ -185,6 +199,8 @@ class ViewController: UIViewController {
         content.title = notificationType
         content.body = " "
         print(status.audioTone)
+        
+        // adding tones to notification based on user selection
         if status.audioTone == "Default"
         {
             content.sound = UNNotificationSound.default
@@ -210,6 +226,7 @@ class ViewController: UIViewController {
         
         ringProgressView?.progress = abs(intervalTime / Double(btnSelected))
         
+        // looping once the timer is completed
         if displayTime == 0
         {
             status.startTime = Date()
@@ -224,7 +241,11 @@ class ViewController: UIViewController {
         let absInterval = abs(Int(interval))
         let seconds = absInterval % 60
         let minutes = absInterval / 60
+        
+        //initial value the time label
         var timeString = "5:00"
+        
+        //based on user selection time label text changes
         if minutes != 0 {
             timeString = String(minutes) + ":" + String(format: "%.2d", seconds)
             
@@ -232,6 +253,8 @@ class ViewController: UIViewController {
             timeString = String(seconds)
         }
         timeLabel.text = timeString
+        
+        //adding user selection to user defaults which can be accessed in Widget
         UserDefaults.init(suiteName: "group.mosaic.MosiacTimers")?.setValue(timeString, forKey: "availableTime")
         
     }
@@ -242,6 +265,7 @@ class ViewController: UIViewController {
         let xvalue = Int(sender.frame.origin.x)
         let labels = self.view.subviews.compactMap { $0 as? UILabel }
         
+        //checking for changing the label color to red based on which timer is active
         for label in labels {
             if label.tag == sender.tag*10
             {
@@ -266,54 +290,40 @@ class ViewController: UIViewController {
         ringProgressView!.progress = 0.0
         view.addSubview(ringProgressView!)
         view.bringSubviewToFront(sender)
+        
+        // changing default values to user selected current value
         status.targetTime = sender.tag
         btnSelected = status.targetTime
         status.startTime = Date()
+        
+        // Starting the timer
         if atimer != nil
         {
             atimer?.invalidate()
         }
         atimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.startTimer), userInfo: nil, repeats: true)
         
+        // formatting the time to show in UI
         self.covertTimeInterval(interval: TimeInterval(btnSelected))
     }
-    @objc func registerBackgroundTask() {
-        print("Remaining time")
-        backTimer = Timer.scheduledTimer(timeInterval: 50, target: self, selector: #selector(ViewController.registerBackgroundTask), userInfo: nil, repeats: false)
-        print(UIApplication.shared.backgroundTimeRemaining)
-        backgroundTask = UIApplication.shared.beginBackgroundTask {
-            [unowned self] in
-            self.endBackgroundTask()
-            
-        }
-        assert(backgroundTask != UIBackgroundTaskIdentifier.invalid)
-    }
-    func restartBackgroundTask(){
-        endBackgroundTask()
-        registerBackgroundTask()
-    }
-    func endBackgroundTask() {
-        UIApplication.shared.endBackgroundTask(backgroundTask)
-        backgroundTask = UIBackgroundTaskIdentifier.invalid
-    }
-    @objc func reinstateBackgroundTask() {
-        if atimer != nil && backgroundTask ==  .invalid {
-            registerBackgroundTask()
-        }
-    }
-
 }
+
+// add custom colors in the UIColor class
 extension UIColor {
     static var btnBorderColor = UIColor.init(red: 212/255, green: 212/255, blue: 212/255, alpha: 1)
     static var btnTextColor = UIColor.init(red: 136/255, green: 136/255, blue: 136/255, alpha: 1)
     static var labelColor = UIColor.init(red: 0/255, green: 187/255, blue: 114/255, alpha: 1)
 }
+
+
 extension ViewController : UNUserNotificationCenterDelegate{
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound, .badge])
     }
 }
+
+//Bottom popup delegate methods
 extension ViewController: BottomPopupDelegate {
     
     func bottomPopupViewLoaded() {

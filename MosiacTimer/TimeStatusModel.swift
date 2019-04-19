@@ -10,6 +10,8 @@ import UIKit
 
 final class TimeStatusModel {
     
+    
+    // To store user selection or default timer value
     var targetTime: Int {
         get {
             return UserDefaults.standard.integer(forKey: #function)
@@ -20,6 +22,7 @@ final class TimeStatusModel {
         }
     }
     
+    // To store the start time of the timer
     var startTime: Date {
         get {
             if let time = UserDefaults.standard.object(forKey: #function) as? Date {
@@ -33,25 +36,7 @@ final class TimeStatusModel {
         }
     }
     
-    var stopWatchIsOn: Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: #function)
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: #function)
-        }
-    }
-    
-    var totalTime: Double {
-        get {
-            return UserDefaults.standard.double(forKey: #function)
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: #function)
-        }
-    }
+    // To store the tone selection or default option
     var audioTone: String {
         get {
             return UserDefaults.standard.string(forKey: #function) ?? "nil"

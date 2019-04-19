@@ -18,7 +18,8 @@ class TodayViewController: UIViewController, NCWidgetProviding, UIGestureRecogni
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bringSubviewToFront(openBtn)
-        print(openBtn.isUserInteractionEnabled)
+    
+        //timer for displaying the timer in the widget
         if atimer != nil
         {
             atimer?.invalidate()
@@ -27,17 +28,21 @@ class TodayViewController: UIViewController, NCWidgetProviding, UIGestureRecogni
         // Do any additional setup after loading the view.
     }
     @objc func startTimer() {
+      
+        //accessing value from userdefaults and displaying it in widget
         if let timeFromApp = UserDefaults.init(suiteName: "group.mosaic.MosiacTimers")?.value(forKey: "availableTime") {
             timeLabel.text = timeFromApp as? String
         }
     }
     
+    // opening the app when the widget in pressed
     @IBAction func openBtnAction(_ sender: UIButton) {
         if let url = URL(string: "open://")
         {
             self.extensionContext?.open(url, completionHandler: nil)
         }
     }
+    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
         

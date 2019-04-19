@@ -28,6 +28,8 @@
 		AFE5B0BD2267B15D00355479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */; };
 		AFE5B0C82267B15D00355479 /* MosiacTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0C72267B15D00355479 /* MosiacTimerTests.swift */; };
 		AFE5B0D32267B15D00355479 /* MosiacTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5B0D22267B15D00355479 /* MosiacTimerUITests.swift */; };
+		AFE8D629226987E100A36747 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE8D628226987E100A36747 /* BackgroundTask.swift */; };
+		AFE8D62B22698D7E00A36747 /* blank.wav in Resources */ = {isa = PBXBuildFile; fileRef = AFE8D62A22698D7D00A36747 /* blank.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		AFE5B0CE2267B15D00355479 /* MosiacTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosiacTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE5B0D22267B15D00355479 /* MosiacTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosiacTimerUITests.swift; sourceTree = "<group>"; };
 		AFE5B0D42267B15D00355479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE8D628226987E100A36747 /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		AFE8D62A22698D7D00A36747 /* blank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blank.wav; sourceTree = "<group>"; };
 		CF343EB71A9B11B4A6F364FD /* Pods-MosiacTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerTests.release.xcconfig"; path = "Target Support Files/Pods-MosiacTimerTests/Pods-MosiacTimerTests.release.xcconfig"; sourceTree = "<group>"; };
 		D91CFE51F87EF25BBA286EA4 /* Pods_MosiacTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MosiacTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E515C68D7E028094279A7C9A /* Pods-MosiacTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosiacTimerTests.debug.xcconfig"; path = "Target Support Files/Pods-MosiacTimerTests/Pods-MosiacTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,20 +211,14 @@
 		AFE5B0B12267B15B00355479 /* MosiacTimer */ = {
 			isa = PBXGroup;
 			children = (
-				AF97657122692D68001DAD96 /* Point.wav */,
-				AF97657522692D6A001DAD96 /* Quite.wav */,
-				AF97657322692D69001DAD96 /* Slow.wav */,
-				AF97657222692D68001DAD96 /* Unconvinced.wav */,
-				AF97657422692D69001DAD96 /* Unsure.wav */,
+				AFE8D62F2269921300A36747 /* Storyboard */,
+				AFE8D62D226991F100A36747 /* View Controllers */,
+				AFE8D62E2269920200A36747 /* App Delegate */,
+				AFE8D6302269923300A36747 /* Model */,
+				AFE8D62C226991C100A36747 /* Resources */,
 				AF97655B2268FA3F001DAD96 /* MosiacTimer.entitlements */,
-				AFE5B0B22267B15B00355479 /* AppDelegate.swift */,
-				AFE5B0B42267B15B00355479 /* ViewController.swift */,
-				AFE5B0B62267B15B00355479 /* Main.storyboard */,
 				AFE5B0B92267B15D00355479 /* Assets.xcassets */,
-				AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */,
 				AFE5B0BE2267B15D00355479 /* Info.plist */,
-				AF164CF22267DAAB00610264 /* TimeStatusModel.swift */,
-				AFA23EC32269497A00898FFB /* PopUpViewController.swift */,
 			);
 			path = MosiacTimer;
 			sourceTree = "<group>";
@@ -241,6 +239,54 @@
 				AFE5B0D42267B15D00355479 /* Info.plist */,
 			);
 			path = MosiacTimerUITests;
+			sourceTree = "<group>";
+		};
+		AFE8D62C226991C100A36747 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8D62A22698D7D00A36747 /* blank.wav */,
+				AF97657122692D68001DAD96 /* Point.wav */,
+				AF97657522692D6A001DAD96 /* Quite.wav */,
+				AF97657322692D69001DAD96 /* Slow.wav */,
+				AF97657222692D68001DAD96 /* Unconvinced.wav */,
+				AF97657422692D69001DAD96 /* Unsure.wav */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AFE8D62D226991F100A36747 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0B42267B15B00355479 /* ViewController.swift */,
+				AFA23EC32269497A00898FFB /* PopUpViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AFE8D62E2269920200A36747 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0B22267B15B00355479 /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		AFE8D62F2269921300A36747 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AFE5B0B62267B15B00355479 /* Main.storyboard */,
+				AFE5B0BB2267B15D00355479 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		AFE8D6302269923300A36747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF164CF22267DAAB00610264 /* TimeStatusModel.swift */,
+				AFE8D628226987E100A36747 /* BackgroundTask.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +443,7 @@
 			files = (
 				AFE5B0BD2267B15D00355479 /* LaunchScreen.storyboard in Resources */,
 				AF97657722692D6A001DAD96 /* Unconvinced.wav in Resources */,
+				AFE8D62B22698D7E00A36747 /* blank.wav in Resources */,
 				AFE5B0BA2267B15D00355479 /* Assets.xcassets in Resources */,
 				AF97657822692D6A001DAD96 /* Slow.wav in Resources */,
 				AFE5B0B82267B15B00355479 /* Main.storyboard in Resources */,
@@ -531,6 +578,7 @@
 				AF164CF32267DAAB00610264 /* TimeStatusModel.swift in Sources */,
 				AFE5B0B52267B15B00355479 /* ViewController.swift in Sources */,
 				AFE5B0B32267B15B00355479 /* AppDelegate.swift in Sources */,
+				AFE8D629226987E100A36747 /* BackgroundTask.swift in Sources */,
 				AFA23EC42269497A00898FFB /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
