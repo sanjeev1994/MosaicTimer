@@ -197,7 +197,7 @@ class ViewController: UIViewController {
         print("background \(Date())")
         let content = UNMutableNotificationContent()
         content.title = notificationType
-        content.body = " "
+        content.body = "Timer has been restarted"
         print(status.audioTone)
         
         // adding tones to notification based on user selection
@@ -230,7 +230,7 @@ class ViewController: UIViewController {
         if displayTime == 0
         {
             status.startTime = Date()
-            scheduleNotification(notificationType: "Timer Done")
+            scheduleNotification(notificationType: "Timer Completed")
         }
         
     }
